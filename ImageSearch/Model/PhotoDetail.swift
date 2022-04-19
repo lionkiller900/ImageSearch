@@ -1,8 +1,13 @@
 //
 //  PhotoDetail.swift
-//  ImageSearch
+//  PhotoSearchGallary
 //
-//  Created by Admin on 19/04/2022.
+//  Created by Daniel 18/04/22.
 //
 
 import Foundation
+
+struct PhotoDetail {
+    let title: String
+    let url: String
+}

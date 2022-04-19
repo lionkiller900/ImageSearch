@@ -1,12 +1,19 @@
 //
 //  PhotoCollectionViewCell.swift
-//  ImageSearch
+//  PhotoSearchGallary
 //
-//  Created by Admin on 19/04/2022.
+//  Created by Daniel 18/04/22.
 //
 
 import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.photoImageView.image = nil
+    }
     
 }

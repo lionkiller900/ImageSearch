@@ -1,23 +1,26 @@
 //
 //  PhotoDetailsTableViewCell.swift
-//  ImageSearch
+//  PhotoSearchGallary
 //
-//  Created by Admin on 19/04/2022.
+//  Created by  Daniel 18/04/22..
 //
 
+import Foundation
 import UIKit
 
 class PhotoDetailsTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var flickImage: UIImageView!
+    @IBOutlet weak var imgDesc: UILabel!
+    
+    override func prepareForReuse() {
+        self.flickImage.image = nil
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setData(_ photoDetail: PhotoDetail) {
+        imgDesc.text = photoDetail.title
+//        let url = URL(string: photoDetail.url)
+//        flickImage.kf.setImage(with:url)
     }
 
 }
