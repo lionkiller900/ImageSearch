@@ -23,7 +23,7 @@ class PhotoSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
         bindViewModelState()
         bindSearchTextFieldToViewModel()
         
@@ -35,20 +35,21 @@ class PhotoSearchViewController: UIViewController {
     }
     
     private func bindSearchTextFieldToViewModel() {
-        
+
         let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchBar.searchTextField)
-        
+
         publisher
             .map {
                 ($0.object as! UISearchTextField).text!
             }
             .debounce(for: .milliseconds(1000), scheduler: RunLoop.main)
             .sink { [weak self] searchedText in
-              
-                
+
+
                 self?.viewModel.search(searchedText: searchedText)
             }.store(in: &bindings)
     }
+    
     private func bindViewModelState() {
         let cancellable =  viewModel.stateBinding.sink { completion in
             

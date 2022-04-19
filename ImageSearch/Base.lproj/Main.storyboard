@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="522" y="824"/>
         </scene>
-        <!--Photo Search View Controller-->
+        <!--Image Search-->
         <scene sceneID="yWA-Qf-p6m">
             <objects>
                 <viewController id="Qem-2D-zaz" customClass="PhotoSearchViewController" customModule="ImageSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,7 +104,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2aS-Tz-RgL">
+                            <searchBar contentMode="redraw" placeholder="Search Photos" translatesAutoresizingMaskIntoConstraints="NO" id="2aS-Tz-RgL">
                                 <rect key="frame" x="0.0" y="88" width="414" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Pyl-SP-7TC"/>
@@ -172,7 +172,7 @@
                             <constraint firstItem="9nV-Dz-Uef" firstAttribute="centerY" secondItem="QZi-YF-MqX" secondAttribute="centerY" id="wor-k9-Kse"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vra-DK-HDo"/>
+                    <navigationItem key="navigationItem" title="Image Search" id="vra-DK-HDo"/>
                     <connections>
                         <outlet property="activityIndicator" destination="9nV-Dz-Uef" id="sFA-LV-edS"/>
                         <outlet property="collectionView" destination="ou3-5J-LZg" id="YGD-WU-UGC"/>
@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIe-00-9Sy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="38"/>
+            <point key="canvasLocation" x="1017" y="52"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="26l-cQ-mS9">
@@ -199,7 +199,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MME-Hf-JoZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="51.5625"/>
+            <point key="canvasLocation" x="341" y="52"/>
         </scene>
     </scenes>
     <resources>
